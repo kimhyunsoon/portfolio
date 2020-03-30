@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viweport" content="width=device-width">
+    <title>메디치피아</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        //탭메뉴
+        $('.sec1 h4 a').click(function(){
+            $('.sec1 h4').removeClass('on');
+            $(this).parent().addClass('on');
+            return false;
+            
+        });
+        $('.sec1 h4:nth-child(2) a').click(function(){
+            $('#gong').show();
+            $('#new').hide();
+        });
+        $('.sec1 h4:nth-child(3) a').click(function(){
+            $('#gong').hide();
+            $('#new').show();
+        });
+        
+        
+        //퀵메뉴 스크롤할때마다 그자리로 움직이게
+        var as2Top = parseInt($('.as2').css('top'));
+        console.log(as2Top);
+        
+        $(window).scroll(function(){
+            var winST = $(window).scrollTop();
+            $('.as2').stop().animate({'top':as2Top+winST+'px'},500)
+        });
+        
+        //패밀리사이트 링크
+        $('.goF').click(function(){
+            $('.familyM').toggle();
+            return false;
+        });
+    });
+    </script>
+</head>
+<body>
+<header id="header">
+    <div class="wrap">
+        <h1><a href="#"><img src="images/logo.png" alt="메디치피아"></a></h1>
+        <ul class="mainM">
+            <li><a href="#"><img src="images/top_m1.png" alt="센터소개"></a></li>
+            <li><a href="#"><img src="images/top_m2.png" alt="프로그램안내"></a></li>
+            <li><a href="#"><img src="images/top_m3.png" alt="건강검진예약"></a></li>
+            <li><a href="#"><img src="images/top_m4.png" alt="마이페이지"></a></li>
+        </ul>
+        <h2><a href="#"><img src="images/logo2.png" alt="구로성심병원"></a></h2>
+        <div class="topM">
+            <img src="images/top_menu.png" alt="탑메뉴" usemap="#topMimg">
+            <map name="topMimg">
+                <area shape="rect" coords="0,0,70,40" href="#login" alt="로그인">
+                <area shape="rect" coords="70,0,130,40" href="#join" alt="회원가입">
+                <area shape="rect" coords="170,0,225,40" href="#introd" alt="병원소개">
+                <area shape="rect" coords="227,0,275,40" href="#cc" alt="고객센터">
+                <area shape="rect" coords="280,0,330,40" href="#sitemap" alt="사이트맵">
+            </map>
+        </div>
+    </div>
+    <div class="topBar">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+</header>
+<div id="content">
+    <div class="wrap">
+        <section class="sec1">
+            <h3 class="hid">공지사항과 새소식</h3>
+            
+            <h4 class="on"><a href="#gong">공지사항</a></h4>
+            <h4><a href="#new">새소식</a></h4>
+            <div class="h4G"></div>
+            <ul class="board" id="gong">
+                <li>
+                <a href="#">
+                    <span class="tit">구로성심병원에서 알려드립니다.</span>
+                    <span class="date">2020.01.30</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <span class="tit">어버이날 봉사활동</span>
+                    <span class="date">2020.01.30</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <span class="tit">협력기업과 동반성장 파트너십</span>
+                    <span class="date">2020.01.30</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <span class="tit">축하화환 활용 봉사활동 기금 적립</span>
+                    <span class="date">2020.01.30</span>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <span class="tit">구로성심병원 종합검진 센터가 오픈되었습니다.</span>
+                    <span class="date">2020.01.30</span>
+                </a>
+                </li>
+                <li><a href="#moregong">more</a></li>
+            </ul>
+            
+            <ul class="board" id="new">
+                <li>
+                <a href="#">
+                    <span class="tit">새소식 게시판입니다.</span>
+                    <span class="date">2020.01.30</span>
+                </a>
+                </li>
+                <li><a href="#morenew">more</a></li>
+            </ul>   
+                
+        </section>
+        <section class="sec2">
+            <h3 class="hid">바로가기 메뉴1</h3>
+            <a href="tel:0220671870">
+                <img src="images/contact1.png" alt="진료문의">
+            </a>
+            <a href="#">
+            <img src="images/contact2.png" alt="인터넷검진예약">
+            </a>
+        </section>
+        <section class="sec3">
+            <h3 class="hid">바로가기 메뉴2</h3>
+            <img src="images/main.png" alt="메인배너" usemap="#mainImg">
+            <map name="mainImg">
+                <area shape="rect" coords="30,400,230,560" alt="내게 맞는 검진" href="#">
+                <area shape="rect" coords="330,400,520,560" alt="센터 둘러보기" href="#">
+            </map>
+        </section>
+        <aside class="as1">
+            <p class="hid">풍선애니메이션</p>
+            <img src="images/float_img.png" alt="풍선">
+        </aside>
+        <aside class="as2">
+            <p class="hid">바로가기 메뉴3</p>
+            <img src="images/quick.png" alt="내게 맞는 검진" usemap="#quickImg">
+            <map name="quickImg">
+                <area shape="rect" alt="예약안내" href="#" coords="0,136,83,165">
+                <area shape="rect" alt="운영시간안내" href="#" coords="0,166,83,195">
+                <area shape="rect" alt="구로성심병원" href="#" coords="0,196,83,225">
+                <area shape="rect" alt="오시는길" href="#" coords="0,226,83,255">
+            </map>
+        </aside>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="wrap">
+        <h5>
+        <a href="#">
+            <img src="images/logo3.png" alt="구로성심병원">
+        </a>
+        </h5>
+        <address>
+            <img src="images/infor.png" alt="서울시 구로구 고척1동">
+        </address>
+        <div class="botM">
+            <ul>
+                <li><a href="#">개인정보방침</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="mailto:admin@medi.com">메일보내기</a></li>
+            </ul>
+            <a href="#" class="goF">
+                <img src="images/fam.png" alt="패밀리사이트">
+            </a>
+            <div class="familyM">
+                <a href="http://www.naver.com">네이버</a>
+                <a href="http://www.daum.net">다음</a>
+                <a href="http://www.google.com">구글</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+

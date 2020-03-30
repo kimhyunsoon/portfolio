@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>퀵메뉴</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR:100,300,400,500,700,900|Noto+Serif+KR:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--
+    'Noto Sans KR', sans-serif; / 1,3,4,5,7,9
+    'Noto Serif KR', serif; / 2,3,4,5,6,7,9
+    'Nanum Pen Script', cursive; / 6
+-->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1;
+            font-family: 'Noto Sans KR', sans-serif!important;
+            list-style-type: none;
+        }
+
+        #wrap {
+            width: 360px;
+            border: 0px solid red;
+            margin: auto;
+            position: relative;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black
+        }
+
+        #toolbar {
+            width: 360px;
+            height: 68px;
+            background: #F8F9FA;
+            border-bottom: 2px solid rgba(0, 0, 0, 20%);
+            position: fixed;
+            top: 0px;
+            z-index: 100;
+        }
+
+        #toolbar .logolink {
+            display: inline-block;
+            width: 108px;
+            margin-left: 126px;
+            margin-top: 16px;
+        }
+
+        #toolbar .logoimg {
+            width: 108px;
+        }
+
+        #toolbar .backlink {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 316px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        #toolbar .back {
+            width: 16px;
+        }
+
+        #body .signback {
+            width: 360px;
+        }
+
+        #body .signcard {
+            width: 320px;
+            position: absolute;
+            top: 140px;
+            left: 20px;
+        }
+
+        #body .bodytitle {
+            position: absolute;
+            top: 96px;
+            left: 26px;
+            color: #F8F9FA;
+            font-size: 20px;
+            width: 300px;
+        }
+
+        #body .bodytitle span {
+            font-size: 20px;
+            font-weight: 100;
+            vertical-align: top;
+        }
+
+        #body .unlogprofile {
+            width: 96px;
+            position: absolute;
+            top: 180px;
+            left: 132px;
+        }
+
+        #body .loginform {
+            position: absolute;
+            top: 306px;
+            left: 50px;
+        }
+
+        #body .loginform .inputid,
+        .inputpw {
+            display: block;
+            margin: 10px;
+            border: none;
+            background-color: rgba(255, 255, 255, 20%);
+            border-radius: 5px;
+            width: 240px;
+            height: 36px;
+            padding-left: 16px;
+
+        }
+
+        #body .loginform .idcheckbox {
+            position: absolute;
+            top: 104px;
+            left: 160px;
+            border: none;
+        }
+
+        #body .loginform .idchecklabel {
+            position: absolute;
+            left: 180px;
+            font-weight: 100;
+        }
+
+        #body .loginform .login {
+            position: absolute;
+            top: 126px;
+            left: 22px;
+            width: 96px;
+            padding-top: 2px;
+            background-color: #471811;
+            color: #F8F9FA;
+            height: 30px;
+            border-radius: 100px;
+            border-style: none;
+            cursor: pointer;
+        }
+
+        #body .signup {
+            position: absolute;
+            top: 432px;
+            left: 186px;
+            width: 96px;
+            padding-top: 2px;
+            background-color: #ADB5BD;
+            color: #F8F9FA;
+            height: 30px;
+            line-height: 24px;
+            border-radius: 100px;
+            text-align: center;
+            border-style: none;
+            cursor: pointer;
+            z-index: 300;
+        }
+
+        #body .snstitle {
+            position: absolute;
+            top: 486px;
+            left: 146px;
+            color: black;
+            font-size: 14px;
+            font-weight: 100;
+        }
+
+        #body .snslog {
+            position: absolute;
+            top: 510px;
+            left: 104px;
+            width: 152px;
+            cursor: pointer;
+        }
+
+        #list .listback {
+            width: 360px;
+            position: absolute;
+            top: 640px;
+        }
+
+        #list .listmenu {
+            position: absolute;
+            top: 664px;
+            left: 20px;
+        }
+
+        #list .listmenu p {
+            font-size: 18px;
+            font-weight: 100;
+            margin-bottom: 44px;
+        }
+
+        #list .listicon {
+            position: absolute;
+            top: 664px;
+            left: 328px;
+        }
+
+        #list .listicon img {
+            width: 10px;
+            display: block;
+            margin-bottom: 43.5px;
+        }
+
+        #footer img {
+            width: 360px;
+            position: absolute;
+            top: 890px;
+        }
+    </style>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="toolbar">
+            <a href="index.html" class="logolink">
+                <img src="images/logo_coffeletter.png" alt="로고" class="logoimg">
+            </a>
+            <a href="index.html" class="backlink">
+                <img src="images/back.png" alt="back" class="back">
+            </a>
+        </div>
+        <div id="body">
+            <p class="bodytitle">로그인 <span> 후 </span>이용<span>하실 수 있습니다.</span></p>
+            <img src="images/signcard.png" alt="회원가입영역" class="signcard">
+            <img src="images/signupback.png" alt="회원가입배경" class="signback">
+            <img src="images/profile_unlog.png" alt="비로그인프로필" class=unlogprofile>
+            <form method="post" class="loginform" action="javascript:void(0)">
+                <input type="text" placeholder="이메일" id="id" class="inputid">
+                <label for="id"></label>
+                <input type="password" placeholder="비밀번호" id="pw" class="inputpw">
+                <label for="pw"></label>
+                <input type="checkbox" id="idcheck" class="idcheckbox">
+                <label for="idcheck" class="idchecklabel">아이디저장</label>
+                <input type="submit" id="login" class="login" value="로그인">
+                
+            </form>
+            <a href="signup.html"><p class="signup">회원가입</p></a>
+            <p class="snstitle">간편 로그인</p>
+            <img src="images/snslog.png" alt="sns" class="snslog">
+        </div>
+        <div id="list">
+            <img src="images/listback.png" alt="목록배경" class="listback">
+            <div class="listmenu">
+                <a href="letterorder.html">
+                    <p>레터오더</p>
+                </a>
+                <a href="delivery.html">
+                    <p>배달지역확인</p>
+                </a>
+                <a href="javascript:void(0)" class='blockLink'>
+                    <p>이벤트</p>
+                </a>
+                <a href="javascript:void(0)" class='blockLink'>
+                    <p>고객센터</p>
+                </a>
+            </div>
+            <div class="listicon">
+                <a href="letterorder.html"><img src="images/backre.png" alt="메뉴열기"></a>
+                <a href="delivery.html"><img src="images/backre.png" alt="메뉴열기"></a>
+                <a href="javascript:void(0)" class='blockLink'><img src="images/backre.png" alt="메뉴열기"></a>
+                <a href="javascript:void(0)" class='blockLink'><img src="images/backre.png" alt="메뉴열기"></a>
+            </div>
+        </div>
+        <div id="footer">
+            <img src="images/footer.png" alt="푸터">
+        </div>
+    </div>
+    <script src='js/index.js'></script>
+</body></html>

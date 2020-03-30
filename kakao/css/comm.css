@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* 공통 header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 16px;
+}
+header h1 {
+    background-image: url(../images/kabang.png);
+    background-position: 0 -20px;
+    background-repeat: no-repeat;
+    width: 77px;
+    height: 15px;
+    margin: auto;
+}
+header h1 a {
+    display: block;
+}
+header h1 a span {
+    text-indent: -99999px;
+    display: block;
+}
+header nav {
+    display: none;
+    /*height:0; overflow:hidden;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 10;
+}
+header nav h2 {
+    background-image: url(../images/kabang.png);
+    background-position: 0 0;
+    width: 77px;
+    height: 15px;
+    margin: auto;
+    text-indent: -99999px;
+    margin-top: 16px;
+}
+header nav .menuClose {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-image: url(../images/kabang.png);
+    background-position: -60px -40px;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+header nav .tMenu {
+    padding: 20px;
+}
+header nav .tMenu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+header nav .tMenu li:last-child {
+    border-bottom: 0;
+}
+header nav .tMenu li a {
+    display: block;
+    padding: 24px 0;
+    text-indent: 10px;
+}
+header nav .tMenu li a:hover {
+    text-decoration: none;
+    background-color: #fbda00;
+}
+header nav .footer {
+    background-color: #f8f8f8;
+    padding: 20px 30px;
+}
+
+header nav .footer .fMenu {}
+
+header nav .footer .fMenu li {
+    float: left;
+    padding-right: 8px;
+}
+
+header nav .footer .fMenu li:after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #b4b4b4;
+    margin-left: 8px;
+}
+
+header nav .footer .fMenu li:last-child:after {
+    content: none;
+}
+
+header nav .footer .fMenu li a {
+    font-size: 12px;
+}
+
+header nav .footer .copyright {
+    clear: both;
+    font-size: 10px;
+    padding: 10px 0;
+    color: #9d9d9d;
+}
+
+header .menuBtn {
+    background-image: url(../images/kabang.png);
+    background-position: -80px -20px;
+    width: 18px;
+    height: 18px;
+    text-indent: -99999px;
+    cursor: pointer;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}

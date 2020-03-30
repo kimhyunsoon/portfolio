@@ -1,0 +1,127 @@
+/*메디치피아 사이트 공통 스타일*/
+body{font-family: "돋움"; font-size: 13px;}
+a{text-decoration: none; color:#585858;}
+a:hover{color:#222;}
+.hid{display: none;}
+.wrap{width: 928px; margin: auto; /*border: 1px solid red;*/
+position: relative; overflow: hidden;
+}
+
+/*메디치피아 사이트 메인 페이지 스타일*/
+
+/*상단 공통*/
+#header{
+    background-image: url('../images/top_bg_bar.png');
+    background-repeat: repeat-x;
+    
+}
+#header h1{float: left; margin-top: 67px; margin-right: 80px;}
+#header ul.mainM{float: left; margin-top: 76px;}
+#header ul.mainM li{float: left; margin-right: 52px;}
+#header h2{float: right; margin-top: 67px;}
+#header div.topM{position: absolute; top:0; left: 0;
+width: 100%; text-align: center;
+}
+.topBar{box-shadow: 0 1px 2px rgba(0,0,0,0.3); height: 8px;}
+.topBar div{float: left; height: 8px;}
+.bar1 {
+    width:25%; 
+    background: #8ac646; 
+}
+
+.bar2 {
+    width:60%;
+    background: linear-gradient(to right, #1f7d47,#3c8f46 );
+}
+
+.bar3 {
+    width:15%; 
+    background: linear-gradient(to right, #1650a5,#0c82c9 );
+}
+
+/*메인 내용*/
+#content{clear: both;}
+.sec1{margin-top:40px; width: 290px;position: relative; z-index: 10;}
+.sec1 .h4G{
+    clear: both;
+    border-bottom:1px solid #18499f;
+}
+.sec1 h4{
+    background-color: #e8e9e9;
+    border:1px solid #e0e0e0;
+    border-bottom:1px solid #18499f;
+    color:#787878;
+    font-size: 1.15em;
+    float: left;
+    padding: 6px 12px;
+    position: relative; top:1px;
+    font-weight: bold;
+}
+
+.sec1 h4.on{
+    background-color: #fff;
+    border:1px solid #18499f;
+    border-bottom:1px solid #fff;
+}
+.sec1 h4 a{color:#787878;}
+.sec1 h4.on a{color:#18499f}
+
+.sec1 ul.board{clear: both; margin-top: 20px; position: relative;
+height: 105px;
+}
+.sec1 ul.board li{
+    background-image: url('../images/bul.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1em;
+}
+.sec1 ul.board li a{overflow: auto; display: block; padding: 4px 0;}
+.sec1 ul.board li a .tit{width: 200px; display: block; float: left;
+overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.sec1 ul.board li a .date{float: right;}
+.sec1 ul.board li:last-child{background-image: none;
+    position: absolute; top:-40px; right: 0;
+}
+.sec1 ul.board li:last-child a{color:#18499f; font-size: 11px;}
+#new{display: none;}
+
+.sec2{margin-top: 124px; width: 200px; position: relative; z-index: 10;}
+.sec2 img{margin-bottom: 40px;}
+
+.sec3{position: absolute; top:100px; left: 200px;}
+.as1{position: absolute; top:50px; right: 100px; 
+    animation: as1Ani 3s infinite alternate;
+}
+.as2{position: absolute; top:140px; right: 0;}
+@keyframes as1Ani{
+    0%{
+        top:50px;
+    }
+    100%{
+        top:0px;
+    }
+}
+/*하단 공통*/
+#footer{padding-bottom: 100px; padding-top:70px;}
+#footer h5{float: left; margin-right: 16px;}
+#footer address{float: left;}
+#footer .botM{float: right;}
+#footer .botM ul{}
+#footer .botM ul li{float: left; font-size: 11px; margin-left: 4px;
+border-left: 1px solid #000; padding-left: 4px;}
+#footer .botM ul li:first-child{border: 0;}
+#footer .botM .goF{text-align: right; display: block;}
+#footer .botM .familyM{border: 1px solid #ccc; width: 130px;
+float: right; display: none;}
+#footer .botM .familyM a{display: block;
+    border-bottom: 1px solid #ccc; text-align: center;
+    padding: 4px 0;
+}
+#footer .botM .familyM a:last-child{border: 0;}
+#footer .botM .familyM a:hover{background-color:azure}
+
+
+
+
+
+

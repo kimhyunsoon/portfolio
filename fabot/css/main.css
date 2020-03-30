@@ -1,0 +1,129 @@
+body{ font-family: 'NanumSquare', sans-serif !important; 
+    font-size: 24px; font-weight: 300; line-height: 1.5;
+}
+strong{font-weight: bold;}
+a{text-decoration: none}
+button{background-color: transparent; border: 0; cursor: pointer;}
+.wrap{width: 1400px; padding: 0 ; margin:auto}
+.btn{border: 3px solid #000; border-radius:18px; 
+    width: 370px; height: 74px; font-size: 24px;
+    margin-top: 70px;
+}
+.btn-w{border-color: white; color: white;}
+.btn-b{border-color: #2196f3; color:#2196f3;}
+.btn-r{border-color: #de3030; color:#de3030;}
+.btn-p{border-color: #83519f; color:#83519f;}
+.btn-g{border-color: #39b068; color:#39b068;}
+.h-bar{width: 114px; height: 7px; margin:38px 0;}
+.h-bar-b{background-color: #2196f3;}
+.h-bar-g{background-color: #39b068;}
+.h-bar-w{background-color: white;}
+.h-bar-p{background-color: #83519f;}
+.h-bar-r{background-color: #de3030;}
+
+#header {position: fixed; top:0; left: 0; width: 100%;
+z-index: 10; transition: 0.5s;}
+
+#header.bg{background-color: rgba(0,0,0, .8);}
+#header.bg h1{transform: scale(0.45)}
+#header.bg .wrap{padding: 10px 0; }
+#header.bg .gnb{padding-top: 20px;}
+#header.bg .gnb a{padding: 10px 28px;}
+
+
+#header .wrap{padding-top: 50px;}
+#header h1 {float: left; transition: 0.5s;}
+
+#header .gnb {float: right; padding-top: 20px;}
+#header a {padding: 28px; color:white; font-weight: 400;}
+#header a:hover{border-bottom: 2px solid white;}
+
+#banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 1018px;
+    min-width: 1440px;
+}
+#banner .wrap{padding-top:300px; color: white;text-shadow: 2px 2px 5px rgba(0,0,0, 0.5);}
+#banner h2{font-size: 90px; font-weight: 900;
+padding-bottom: 50px;}
+#banner p{ font-size: 26px; width: 800px;
+line-height: 1.5;}
+#banner .btn{text-shadow: 2px 2px 3px rgba(0,0,0, 0.5);}
+
+#banner2{background-color: #252525; color: white; height: 580px;
+background-image: url(../images/banner2.png);
+background-repeat: no-repeat;
+background-position: center;
+text-align: center;}
+#banner2 h2{padding-top: 104px; font-size: 50px; font-weight: 900; margin-bottom: 24px;}
+#banner2 p{font-size: 30px;}
+#banner2 .v-bar{width: 3px; height: 113px; background-color: #fff; margin:30px auto;}
+#banner2 p:last-child{font-size: 24px; width: 700px; margin: auto;}
+
+/*오늘은 여기까지 */
+h2{font-size: 58px;}
+#hts .wrap{padding: 200px 0;}
+#rank .wrap{padding-top: 120px; padding-bottom: 40px;}
+#news .wrap{padding: 200px 0;}
+#data .wrap{padding-top: 105px; padding-bottom: 50px;}
+#manager .wrap{padding: 200px 0;}
+#baltoso .wrap{padding-top: 107px; padding-bottom: 44px;}
+#fabotk .wrap{padding: 200px 0;}
+
+.wrap{position: relative; overflow: hidden; clear: both;}
+.txt-box{width: 700px;position: relative; z-index: 5;}
+.txt-box p{width: 600px; margin-top:52px;}
+.img-box{position: absolute; top:200px; right: 0;}
+
+#hts{margin-bottom: 200px;}
+
+#rank{background-color: #f9f9f9;}
+#rank .txt-box{float: right; width: 538px;}
+#rank .txt-box p{width: 500px;}
+
+#rank .img-box{left: 0; top:130px;}
+#news .txt-box{width: 625px;}
+
+#data{background-color: #1979ca; color: white;}
+#data .img-box{left: 0; top:105px;}
+#data .txt-box{float: right; width: 640px;}
+.dot{position: relative; top:-0.3em;}
+
+#manager p{width: 500px;}
+
+#baltoso{background-color: #464646; color: white;}
+
+#baltoso .txt-box{float: right; width: 550px;}
+#baltoso .img-box{left: 0; top:112px;}
+
+#fabotk .txt-box{width:580px;}
+#fabotk .txt-box p {width:500px;}
+
+#footer{background-color: #21202e; color: white;
+font-size: 14px; padding: 52px 0; min-width: 1440px;}
+#footer a{color: white; display: block; padding: 8px 0;
+opacity: 0.8;}
+#footer a:hover{opacity: 1}
+
+#footer h4{font-weight: bold; font-size: 1.2em;
+margin-bottom: 1.2em;}
+
+#footer .f{width: 350px; float: left;}
+#footer .f1 a{display: inline;}
+
+#footer .f4 img{vertical-align: middle;}
+#footer .f4 .h4-2{margin-top: 2em;}
+#footer .f4 form{position: relative;}
+#footer .f4 form label{border: 1px solid rgba(255,255,255, 0.8);
+display: block; padding: 0.5em;}
+#footer .f4 form input{background-color: transparent;
+width: 100%; border: 0; outline: 0; color:white; }
+#footer .f4 form button{position: absolute; top: 0; right: 0; padding: 4px; background-color: #2179ee;}
+
+hr{border: 0; height: 1px; background-color: rgba(255,255,255, 0.5); margin: 34px 0;}
+
+.copy{text-align: center; color: rgba(255,255,255, 0.5)}
+

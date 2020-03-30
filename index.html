@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김현순 | Web Publisher</title>
+    <meta property="og:url" content="http://kimhyunsoon.dothome.co.kr/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="김현순 | Web Publisher"/>
+    <meta property="og:description" content="웹퍼블리셔 김현순의 포트폴리오입니다."/>
+    <meta property="og:image" content="http://kimhyunsoon.dothome.co.kr/img/thumbimg.png"/>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/portbox.css">
+    <link rel="stylesheet" href="css/portview.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR:100,300,400,500,700,900|Work+Sans:100,200,300,400,500,600,700,800,900|Noto+Serif+KR:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+
+    <script src='js/prefixfree.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--폰트어썸-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <style>
+        /*        배너 영역 커스텀*/
+        .hansangB {
+            background-color: #fffdf2;
+        }
+
+        .coffeeB {
+            background-color: #E8F7FF;
+        }
+
+        .luigiB {
+            background-color: #E1F7F3;
+        }
+
+        .hansangB>div>a,
+        .dot1.zdot,
+        .hansangBtn {
+            background-color: #D91414 !important;
+        }
+
+        .coffeeB>div>a,
+        .dot2.zdot,
+        .coffeeBtn {
+            background-color: #704F3A !important;
+        }
+
+        .luigiB>div>a,
+        .dot3.zdot,
+        .luigiBtn {
+            background-color: #1ABC9C !important;
+        }
+
+
+        /*        포트폴리오 영역 커스텀*/
+
+        .soon>div {
+            background-color: #f2f2f2 !important;
+        }
+
+        .hansang>div {
+            background-color: #fffdf2 !important;
+        }
+
+        .luigi>div {
+            background-color: #1ABC9C !important;
+
+        }
+
+        .coffee>div {
+            background-color: #E8F7FF !important;
+        }
+
+        .fabot>div {
+            background-color: #21202E !important;
+        }
+
+        .kakao>div {
+            background-color: #fafafa !important;
+        }
+
+        .soon>ul>li>.point {
+            background-color: #000;
+        }
+
+        .hansang>ul>li>.point {
+            background-color: #d9322e;
+
+        }
+
+        .luigi>ul>li>.point {
+            background-color: #1ABC9C;
+        }
+
+        .coffee>ul>li>.point {
+            background-color: #E8F7FF;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .medi>ul>li>.point {
+            background-color: #005941;
+        }
+
+        .fabot>ul>li>.point {
+            background-color: #21202E;
+        }
+
+        .kakao>ul>li>.point {
+            background-color: #ffdc00;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .kbank>ul>li>.point {
+            background-color: #EE5B6E;
+        }
+
+        .soon>hr {
+            background-color: #000 !important;
+        }
+
+        .hansang>hr {
+            background-color: #d9322e !important;
+        }
+
+        .luigi>hr {
+            background-color: #1ABC9C !important;
+        }
+
+        .coffee>hr {
+            background-color: #704F3A !important;
+        }
+
+        .medi>hr {
+            background-color: #005941 !important;
+        }
+
+        .fabot>hr {
+            background-color: #21202E !important;
+        }
+
+        .kakao>hr {
+            background-color: #ffdc00 !important;
+        }
+
+        .kbank>hr {
+            background-color: #EE5B6E !important;
+        }
+
+        .soon>p,
+        .soon>span {
+            color: #000 !important;
+        }
+
+        .hansang>p,
+        .hansang>span {
+            color: #d9322e !important;
+        }
+
+        .luigi>p,
+        .luigi>span {
+            color: #1ABC9C !important;
+        }
+
+        .coffee>p,
+        .coffee>span {
+            color: #000 !important;
+        }
+
+        .medi>p,
+        .medi>span {
+            color: #005941 !important;
+        }
+
+        .fabot>p,
+        .fabot>span {
+            color: #21202E !important;
+        }
+
+        .kakao>p,
+        .kakao>span {
+            color: #000 !important;
+        }
+
+        .kbank>p,
+        .kbank>span {
+            color: #000 !important;
+        }
+        
+        #contact{
+            height: 1000px;
+        }
+        #contact>i {
+            width: 50px;
+            text-align: center;
+            position: absolute;
+            bottom: 90px;
+            display: block;
+            font-size: 40px;
+            left: 50%;
+            margin-left: -25px;
+            cursor: pointer;
+            color: #FF6B6B;
+            transition: all 0.5s ease-in-out;
+        }
+        #contact>span {
+            position: absolute;
+            width: 150px;
+            left: 50%;
+            margin-left: -75px;
+            bottom: 60px;
+            color: #FF6B6B;
+            transition: all 0.5s ease-in-out;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #contact>.pdfEng {
+            color: #5C7CFA;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='back'></div>
+    <div id='bottom'></div>
+    <div id='left'></div>
+    <div id='right'>
+        <div class='topBtn' title='메뉴'>
+            <div class='br1'></div>
+            <div class='br2'></div>
+            <div class='br3'></div>
+        </div>
+        <div class='menuTab'>
+            <ul>
+                <li data-target='#about'>
+                    <div></div>
+                    <div></div>
+                    <p class='none eng'>ABOUT</p>
+                    <p>인삿말</p>
+                </li>
+                <li data-target='#whatido'>
+                    <div></div>
+                    <div></div>
+                    <p class='none eng'>WHAT I DO</p>
+                    <p>능력</p>
+                </li>
+                <li data-target='#portfolio'>
+                    <div></div>
+                    <div></div>
+                    <p class='none eng'>PORTFOLIO</p>
+                    <p>작업물</p>
+                </li>
+                <li data-target='#contact'>
+                    <div></div>
+                    <div></div>
+                    <p class='none eng'>CONTACT</p>
+                    <p>연락처</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='menuTab2'>
+        <ul>
+            <li data-target='#about'>
+                <p class='kr2 Tab2Pont'>인삿말</p>
+                <p class='none eng2 Tab2Pont2'>ABOUT</p>
+            </li>
+            <li data-target='#whatido'>
+                <p class='kr2 Tab2Pont'>능력</p>
+                <p class='none eng2 Tab2Pont2'>WHAT I DO</p>
+            </li>
+            <li data-target='#portfolio'>
+                <p class='kr2 Tab2Pont'>작업물</p>
+                <p class='none eng2 Tab2Pont2'>PORTFOLIO</p>
+            </li>
+            <li data-target='#contact'>
+                <p class='kr2 Tab2Pont'>연락처</p>
+                <p class='none eng2 Tab2Pont2'>CONTACT</p>
+            </li>
+
+        </ul>
+    </div>
+    <div id="topBack" class='topKr'>
+        <div class='topBtn' title='메뉴'>
+            <div class='br1'></div>
+            <div class='br2'></div>
+            <div class='br3'></div>
+        </div>
+        <img src="img/soonlogo2.png" alt="김현순" class='soonlogoBlack' title='맨 위로 / Top'>
+        <img src="img/soonlogo3.png" alt="김현순" class='soonlogoWhi' title='맨 위로 / Top'>
+        <p class='kr'>안녕하세요, 웹 퍼블리셔 김현순입니다.</p>
+        <p class='none eng'>Hello, I'm Kim Hyun Soon, a web publisher.</p>
+        <div class='trans' title='한글 / Eng'>
+            <span>ABC</span>
+            <span class='transNone'>ㄱㄴㄷ</span>
+        </div>
+    </div>
+    <div id="banner">
+        <div id='playStop' class="playSlide">
+            <div>
+                <div class='playBtn1'></div>
+                <div class='playBtn2'></div>
+                <div class='playBtn3'></div>
+            </div>
+        </div>
+        <div class="dot">
+            <div class='dot1 z5 zwide zdot'></div>
+            <div class='dot2 z4'></div>
+            <div class='dot3 z3'></div>
+        </div>
+        <div class='leftBtn lBt'>
+            <p class='hansangBtn'></p><span class='hansangBtn'></span>
+        </div>
+        <div class='rightBtn rBt'>
+            <p class='hansangBtn'></p><span class='hansangBtn'></span>
+        </div>
+        <div class="bannerBack hansangB z50 zon opa1">
+            <div class="bannerWrap">
+                <img src="img/hansang_logo.png" alt="한상차림로고" class='logo'>
+                <a href="http://tnssha.dothome.co.kr/hansang" target="_blank">
+                    <span>S</span><span>ITEVIEW</span>
+                </a>
+                <img src="img/hansang_back.png" alt="한상차림배경" class='hanBack illBack'>
+                <img src="img/hansang_banner.png" alt="한상차림배경" class='hanIll illIll'>
+            </div>
+        </div>
+        <div class="bannerBack coffeeB z40">
+            <div class="bannerWrap">
+                <img src="img/coffeelogo.png" alt="커피레터로고" class='logo left100'>
+                <a href="http://tnssha.dothome.co.kr/coffeeletter" target="_blank" class='left50'>
+                    <span>S</span><span>ITEVIEW</span>
+                </a>
+                <img src="img/coffee_back.png" alt="커피레터배경" class='coffeeBack illBack top300'>
+                <img src="img/coffee_banner.png" alt="커피레터배경" class='coffeeIll illIll top150'>
+            </div>
+        </div>
+        <div class="bannerBack luigiB z30">
+            <div class="bannerWrap">
+                <img src="img/luigi_logo4.png" alt="루이지로고" class='logo left100'>
+                <a href="http://tnssha.dothome.co.kr/luigi" target="_blank" class='left50'>
+                    <span>S</span><span>ITEVIEW</span>
+                </a>
+                <img src="img/luigi_back.png" alt="루이지배경" class='coffeeBack illBack top300'>
+                <img src="img/luigi_banner.png" alt="루이지배경" class='luigiIll illIll top150'>
+            </div>
+        </div>
+    </div>
+    <div id="bodyBack">
+        <div class="Wrap" id='about'>
+            <p class='title none'>ABOUT</p>
+            <p class='title'>인삿말</p>
+            <div class='titleBar'></div>
+            <div id='aboutCon'>
+                <div class='titleBack1'></div>
+                <div class='titleBack2'></div>
+                <div class='titleBack3'></div>
+                <div class='titleBar2'></div>
+                <img src="img/profile2.png" alt="김현순" class='aboutImg'>
+                <p class='none aeng1'>From</p>
+                <p class='none aeng2'>the client's</p>
+                <p class='none aeng3'>point of view.</p>
+                <p class='akr1'>언제나</p>
+                <p class='akr2'>소비자의</p>
+                <p class='akr3'>입장에서</p>
+                <span class='con1'>안녕하세요 !</span>
+                <span class='con1 none'>Hello !</span>
+                <span class='con2'>'고객의 니즈'를 가장 중요한 가치로 생각하고 웹을 제작하는 웹 퍼블리셔 김현순입니다.</span>
+                <span class='con2 none'>I'm Kim Hyun-soon, who makes the web based on the customer's needs.</span>
+            </div>
+        </div>
+        <div class="Wrap" id='whatido'>
+            <p class='title none'>WHAT I DO</p>
+            <p class='title'>능력</p>
+            <div class='titleBar'></div>
+            <div id="WhatCon">
+                <div class='dev wwrap mtop100a'>
+                    <div class='whatTitle'>
+                        <i class="fas fa-file-code"></i>
+                        <p class='whatTitleTxt'>개 발</p>
+                        <p class='whatTitleTxt none'>D E V E L O P</p>
+                        <div class='titleBar'></div>
+                    </div>
+                    <div class='WhatTxt first'>
+                        <p><span class='WhatSpan'> 웹 표준과 웹 접근성 </span>을 준수합니다.</p>
+                        <p class='WhatEng none'>Complies with <span class='WhatSpan none'>standards and accessibility</span> to the web.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>익스플로러,크롬,사파리 등 <span class='WhatSpan'>다양한 브라우저에 대응</span>하는 페이지를 제작합니다.</p>
+                        <p class='WhatEng none'>Create a web that <span class='WhatSpan none'>responds to various browsers</span> such as IE, Chrome, Safari, etc.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>사용자의 디바이스에 따라 변화하는 <span class='WhatSpan'>반응형 페이지 </span>를 구현합니다.</p>
+                        <p class='WhatEng none'>Implement a <span class='WhatSpan none'>responsive web</span> that varies with the user's device.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>팀 프로젝트의 효율을 위해<span class='WhatSpan'> 깃허브 </span>를 활용합니다.</p>
+                        <p class='WhatEng none'>The <span class='WhatSpan none'>Github</span> is used for the efficiency of the team project.</p>
+                    </div>
+                    <div class='WhatBar'>
+                        <div class='barCon'>
+                            <span>HTML5</span>
+                            <span>90%</span>
+                            <div>
+                                <div class='Nine wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span>CSS3</span>
+                            <span>90%</span>
+                            <div>
+                                <div class='Nine wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span>JavaScript <span>(jQurey)</span></span>
+                            <span>80%</span>
+                            <div>
+                                <div class='Eight wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span class='boot'>Bootstrap & Wordpress</span>
+                            <span>70%</span>
+                            <div>
+                                <div class='Seven wid0a'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='des wwrap mbot100a'>
+                    <div class='whatTitle'>
+                        <i class="fas fa-pen-nib"></i>
+                        <p class='whatTitleTxt'>디 자 인</p>
+                        <p class='whatTitleTxt none'>D E S I G N</p>
+                        <div class='titleBar'></div>
+                    </div>
+                    <div class='WhatTxt first'>
+                        <p>UI/UX를 바탕으로<span class='WhatSpan'> 사용자의 입장에서 디자인 </span>합니다.</p>
+                        <p class='WhatEng none'>Design from <span class='WhatSpan none'>user perspective</span> based on the UI/UX.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>스케치 를 활용하여 <span class='WhatSpan'>소비자의 니즈 변화에 빠르게 대응 </span>합니다.</p>
+                        <p class='WhatEng none'>Use the <span class='WhatSpan none'>Sketch</span> to respond quickly to changes in consumer needs.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>일러스트레이터 를 활용하여 <span class='WhatSpan'>벡터이미지, 로고 및 아이콘 </span>을 제작합니다.</p>
+                        <p class='WhatEng none'>Use the <span class='WhatSpan none'>illustrator </span> to create vector images, logos, and icons.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>팀 프로젝트의 효율을 위해<span class='WhatSpan'> 재플린 </span>을 활용합니다.</p>
+                        <p class='WhatEng none'>The <span class='WhatSpan none'>Zeplin</span> is used for the efficiency of the team project.</p>
+                    </div>
+                    <div class='WhatBar'>
+                        <div class='barCon'>
+                            <span>Sketch</span>
+                            <span>90%</span>
+                            <div>
+                                <div class='Nine wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span>Photoshop</span>
+                            <span>80%</span>
+                            <div>
+                                <div class='Eight wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span>illustratior</span>
+                            <span>70%</span>
+                            <div>
+                                <div class='Seven wid0a'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='other wwrap mleft100a'>
+                    <div class='whatTitle'>
+                        <i class="fas fa-dice-d6"></i>
+                        <p class='whatTitleTxt'>기 타</p>
+                        <p class='whatTitleTxt none'>O T H E R S</p>
+                        <div class='titleBar'></div>
+                    </div>
+                    <div class='WhatTxt first'>
+                        <p>MOS 와 ITQ 자격증이 있으며, 특히 엑셀을 능숙하게 다룹니다.</p>
+                        <p class='WhatEng none'>Have a MOS, ITQ license and I am especially good at handling Excel.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>미디를 이용한 작편곡과 기본적인 사운드 엔지니어링이 가능합니다.</p>
+                        <p class='WhatEng none'>Can compose and arrange songs using MIDI and basic sound engineering.</p>
+                    </div>
+                    <div class='WhatTxt'>
+                        <p>영상의 컷 편집을 하고 자막 및 기본적인 이펙트를 적용할 수 있습니다.</p>
+                        <p class='WhatEng none'>Can edit the cut of the image and apply subtitles and basic effects.</p>
+                    </div>
+                    <div class='WhatBar'>
+                        <div class='barCon'>
+                            <span>MS Office</span>
+                            <span>90%</span>
+                            <div>
+                                <div class='Nine wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span>Logic Pro X</span>
+                            <span>70%</span>
+                            <div>
+                                <div class='Seven wid0a'></div>
+                            </div>
+                        </div>
+                        <div class='barCon'>
+                            <span>Premiere Pro</span>
+                            <span>50%</span>
+                            <div>
+                                <div class='Five wid0a'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Wrap portWrap" id='portfolio'>
+            <p class='title none'>PORTFOLIO</p>
+            <p class='title'>작업물</p>
+            <div class='titleBar'></div>
+            <div class='select'>
+                <div><span class='krSpan krAll'>전체</span><span class='engSpan engAll none'>ALL</span></div>
+                <div class='desktopSel'>
+                    <p class='krp'>PC</p>
+                    <p class='engp none'>desktop</p>
+                </div>
+                <div class='mobileSel'>
+                    <p class='krp'>모바일</p>
+                    <p class='engp none'>mobile</p>
+                </div>
+                <div class='responsiveSel'>
+                    <p class='krp'>반응형</p>
+                    <p class='engp none'>responsive</p>
+                </div>
+                <div class='planningSel'>
+                    <p class='krp'>기획</p>
+                    <p class='engp none'>planning</p>
+                </div>
+                <div class='designSel'>
+                    <p class='krp'>디자인</p>
+                    <p class='engp none'>design</p>
+                </div>
+                <div class='publishingSel'>
+                    <p class='krp'>퍼블리싱</p>
+                    <p class='engp none'>publishing</p>
+                </div>
+            </div>
+            <div class='portBox top420a'>
+                <div class='opa1 soon view planning design publishing responsive' title='김현순 포트폴리오 바로가기' onclick="openInNewTab('http://kimhyunsoon.dothome.co.kr');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/soonlogo2.png" alt="김현순로고"></div>
+                    <p>김현순</p><span>포트폴리오</span>
+                    <p class='none'>HYUN SOON KIM</p><span class='none'>Portfolio</span>
+
+                    <ul>
+                        <li>
+                            <p class='point'>기획</p>
+                            <p class='none point'>planning</p>
+                        </li>
+                        <li>
+                            <p class='point'>디자인</p>
+                            <p class='none point'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p>PC</p>
+                            <p class='none'>desktop</p>
+                        </li>
+                        <li>
+                            <p>모바일</p>
+                            <p class='none'>mobile</p>
+                        </li>
+                        <li>
+                            <p class='point'>반응형</p>
+                            <p class='point none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 hansang view planning design publishing desktop' title='한상차림 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/hansang');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/hansang_logo2.png" alt="한상차림로고"></div>
+                    <p>한상차림</p><span>쇼핑몰</span>
+                    <p class='none'>hansang-charim</p><span class='none'>Food e-commerce</span>
+
+                    <ul>
+                        <li>
+                            <p class='point'>기획</p>
+                            <p class='none point'>planning</p>
+                        </li>
+                        <li>
+                            <p class='point'>디자인</p>
+                            <p class='none point'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p class='point'>PC</p>
+                            <p class='none point'>desktop</p>
+                        </li>
+                        <li>
+                            <p>모바일</p>
+                            <p class='none'>mobile</p>
+                        </li>
+                        <li>
+                            <p>반응형</p>
+                            <p class='none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 coffee view planning design publishing mobile' title='커피레터 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/coffeeletter');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/coffeelogo.png" alt="커피레터로고"></div>
+                    <p>커피레터</p><span>카페 모바일 웹</span>
+                    <p class='none'>COFFEE LETTER</p><span class='none'>Cafe mobile web</span>
+
+                    <ul>
+                        <li>
+                            <p class='point'>기획</p>
+                            <p class='none point'>planning</p>
+                        </li>
+                        <li>
+                            <p class='point'>디자인</p>
+                            <p class='none point'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p>PC</p>
+                            <p class='none'>desktop</p>
+                        </li>
+                        <li>
+                            <p class='point'>모바일</p>
+                            <p class='none point'>mobile</p>
+                        </li>
+                        <li>
+                            <p>반응형</p>
+                            <p class='none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 luigi view planning design publishing responsive' title='슈퍼루이지 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/luigi');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/luigi_logo.png" alt="슈퍼루이지 로고"></div>
+                    <p>슈퍼 루이지</p><span>홍보 사이트</span>
+                    <p class='none'>Super Luigi</p><span class='none'>Promotion web</span>
+                    <ul>
+                        <li>
+                            <p class='point'>기획</p>
+                            <p class='none point'>planning</p>
+                        </li>
+                        <li>
+                            <p class='point'>디자인</p>
+                            <p class='none point'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p>PC</p>
+                            <p class='none'>desktop</p>
+                        </li>
+                        <li>
+                            <p>모바일</p>
+                            <p class='none'>mobile</p>
+                        </li>
+                        <li>
+                            <p class='point'>반응형</p>
+                            <p class='none point'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 kakao view publishing mobile' title='카카오뱅크 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/kakao');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/kakao_logo.png" alt="카카오뱅크로고"></div>
+                    <p>카카오뱅크</p><span>홍보 사이트</span>
+                    <p class='none'>kakao bank</p><span class='none'>Promotion web</span>
+
+                    <ul>
+                        <li>
+                            <p>기획</p>
+                            <p class='none'>planning</p>
+                        </li>
+                        <li>
+                            <p>디자인</p>
+                            <p class='none'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p>PC</p>
+                            <p class='none'>desktop</p>
+                        </li>
+                        <li>
+                            <p class='point'>모바일</p>
+                            <p class='none point'>mobile</p>
+                        </li>
+                        <li>
+                            <p>반응형</p>
+                            <p class='none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 kbank view publishing dsktop' title='케이뱅크 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/kbank');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/kbank_logo.png" alt="케이뱅크로고"></div>
+                    <p>케이뱅크</p><span>기업 사이트</span>
+                    <p class='none'>K bank</p><span class='none'>Enterprise web</span>
+
+                    <ul>
+                        <li>
+                            <p>기획</p>
+                            <p class='none'>planning</p>
+                        </li>
+                        <li>
+                            <p>디자인</p>
+                            <p class='none'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p class='point'>PC</p>
+                            <p class='none point'>desktop</p>
+                        </li>
+                        <li>
+                            <p>모바일</p>
+                            <p class='none'>mobile</p>
+                        </li>
+                        <li>
+                            <p>반응형</p>
+                            <p class='none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 medi view publishing desktop' title='메디치피아병원 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/medi');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/medi_logo.png" alt="메디치피아로고"></div>
+                    <p>메디치피아 병원</p><span>기업 사이트</span>
+                    <p class='none'>Medicipia</p><span class='none'>Enterprise web</span>
+
+                    <ul>
+                        <li>
+                            <p>기획</p>
+                            <p class='none'>planning</p>
+                        </li>
+                        <li>
+                            <p>디자인</p>
+                            <p class='none'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p class='point'>PC</p>
+                            <p class='none point'>desktop</p>
+                        </li>
+                        <li>
+                            <p>모바일</p>
+                            <p class='none'>mobile</p>
+                        </li>
+                        <li>
+                            <p>반응형</p>
+                            <p class='none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class='opa1 fabot view publishing desktop' title='파봇 바로가기' onclick="openInNewTab('http://tnssha.dothome.co.kr/fabot');">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <article>
+                        <p>사이트 보기</p>
+                        <p class='none'>SITE VIEW</p>
+                    </article>
+                    <div><img src="img/fabot_logo.png" alt="파봇로고"></div>
+                    <p>파봇</p><span>홍보 사이트</span>
+                    <p class='none'>FABOT</p><span class='none'>Promotion web</span>
+
+                    <ul>
+                        <li>
+                            <p>기획</p>
+                            <p class='none'>planning</p>
+                        </li>
+                        <li>
+                            <p>디자인</p>
+                            <p class='none'>design</p>
+                        </li>
+                        <li>
+                            <p class='point'>퍼블리싱</p>
+                            <p class='none point'>publishing</p>
+                        </li>
+                        <li>
+                            <p class='point'>PC</p>
+                            <p class='none point'>desktop</p>
+                        </li>
+                        <li>
+                            <p>모바일</p>
+                            <p class='none'>mobile</p>
+                        </li>
+                        <li>
+                            <p>반응형</p>
+                            <p class='none'>responsive</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Wrap" id='contact'>
+            <p class='title none'>CONTACT</p>
+            <p class='title'>연락처</p>
+            <div class='titleBar'></div>
+            <div class='contacCon'>
+                <article class="hei100a"><img src="img/contac.png" alt="연락"></article>
+                <div class='opa0a'><span>당신과의 만남을 기다리겠습니다. :)</span><span class='none'>I hope to meet you soon. :)</span></div>
+                <div class='opa0a'>
+                    <div class='clip clipNone'>
+                        <p>클립보드에 저장되었습니다.</p>
+                        <p class='none'>saved on clipboard.</p>
+                    </div>
+                    <p class='phoneNum'>82+ 10 8443 9554<i class='far fa-clone iKr' title='복사 / copy'></i></p>
+                    <a class='sendSms'>
+                        <p class='contacKrs'>문자 보내기</p>
+                        <p class='none contacEngs'>sand a sms</p>
+                    </a>
+                </div>
+                <div class='opa0a'>
+                    <div class='clip2 clipNone2'>
+                        <p>클립보드에 저장되었습니다.</p>
+                        <p class='none'>saved on clipboard.</p>
+                    </div>
+                    <p class='emailAdd'>tnssha@gmail.com<i class='far fa-clone iKr' title='복사 / copy'></i></p>
+                    <a class='sendMail'>
+                        <p class='contacKrs'>메일 보내기</p>
+                        <p class='none contacEngs'>send a mail</p>
+                    </a>
+                </div>
+            </div>
+            <i class="far fa-file-pdf opa0a" onclick="openInNewTab('kimhyunsoon_pdf.pdf');"></i>
+            <i class="far fa-file-pdf none pdfEng opa0a" onclick="openInNewTab('kimhyunsoon_pdf.pdf');"></i>
+            <span class='opa0a' onclick="openInNewTab('kimhyunsoon_pdf.pdf');">포트폴리오 PDF 보기</span>
+            <span class='none pdfEng opa0a' onclick="openInNewTab('kimhyunsoon_pdf.pdf');">Portfolio PDF View</span>
+        </div>
+    </div>
+    <script src='js/banner.js'></script>
+    <script src='js/index.js'></script>
+    <script src='js/portbox.js'></script>
+    <script src='js/scroll.js'></script>
+    <script>
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+
+    </script>
+</body>
+
+</html>

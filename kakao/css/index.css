@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* index */
+.container {
+    width: 320px;
+    margin: auto;
+}
+
+#banner, .intro {
+    height: 400px;
+    background-image: url(../images/bg_main_3.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.intro h2 {
+    padding-top: 130px;
+    font-size: 30px;
+    color: #FFF;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.intro p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.intro p img {
+    width: 45%;
+}
+
+
+section article {
+    padding-top: 66px;
+}
+
+section h3 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 26px;
+}
+
+section p {
+    line-height: 1.5;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+section img {
+    width: 100%;
+}
+
+section button {
+    background-color: #FFF;
+    padding: 15px;
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin: auto;
+    border: 1px solid #CCC;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+section .a {
+    margin-bottom: 66px;
+}
+
+section .b {
+    background-color: #f7f7f7;
+    background-image: url(../images/mweb-phone-2-190122@2x.png);
+    height: 870px;
+    background-size: 380px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+section .b button {
+    margin-top: 420px;
+    color: #1568b8;
+    font-weight: bold;
+}
+
+section .c {}
+
+section .c img:first-of-type {
+    margin-bottom: 63px;
+}
+
+section .c img:last-of-type {
+    position: relative;
+    top: -34px;
+}
+
+section .d {
+    background-color: #559cde;
+    text-align: center;
+    color: #FFF;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s
+}
+
+section .d p {
+    color: inherit;
+}
+
+section .d img {
+    position: relative;
+    top: 50px;
+}
+
+section .d .moon {
+    position: absolute;
+    top: 40px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #ffdc00;
+    transition: all 0.5s
+}
+
+section .e {
+    margin-bottom: 66px;
+}
+
+section .e button {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 50px;
+}
+
+section .f {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+section .f hr {
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+    background-color: #000;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+section .f img {
+    width: 100px;
+    margin-bottom: 24px;
+}
+
+section .f h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section .f p {
+    font-size: 14px;
+}
+
+section .f1 {
+    padding-bottom: 55px;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 55px;
+}
+
+section .f2 {
+    padding-bottom: 55px;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 55px;
+}
+
+section .f3 {
+    padding-bottom: 55px;
+}

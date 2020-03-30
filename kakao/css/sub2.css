@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* 서브2 */
+
+.list{text-align:center;}
+.list>a{display:inline-block; width:49%; padding:20px 0; text-align:center;}
+.list a:hover{text-decoration:none; font-weight:bold;}
+
+.list>a.active{border-bottom:2px solid #000; font-weight:bold;}
+
+.noticeList{border-top:1px solid #ccc; }
+.noticeList li{text-align:left; border-bottom:1px solid #eee; }
+.noticeList li a{display:block; padding:20px 50px 20px 20px;
+				background-image:url(../images/mweb-card-arrow@2x.png);
+				background-repeat:no-repeat;
+				background-position:95% 50%;
+				background-size:8px 13px;}
+.noticeList li h3{font-size:15px; margin-bottom:14px;}
+.noticeList li p{font-size:12px; color:#666}
+
+.eventList{border-top:1px solid #ccc; }
+.eventList li{text-align:left; border-bottom:1px solid #eee; 
+			clear:both; overflow:auto;}
+.eventList li a{display:block; padding:20px 50px 20px 20px;}
+.eventList li img{float:left; margin-right:20px; margin-bottom:20px;}
+.eventList li h3{font-size:15px; margin-bottom:14px; margin-top:14px; line-height:1.5;}
+.eventList li p{font-size:12px; color:#666}

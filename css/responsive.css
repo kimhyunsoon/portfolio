@@ -1,0 +1,629 @@
+        @media screen and (max-width: 1300px) {
+            #bodyBack {
+                height: 4450px;
+            }
+
+            .Wrap {
+                max-width: 996px;
+            }
+
+            #left {
+                display: none;
+            }
+
+            #right {
+                display: none;
+            }
+
+            #bottom {
+                display: none;
+            }
+
+            #topBack {
+                height: 50px;
+                overflow-y: hidden;
+            }
+
+            #topBack > p {
+                display: none;
+            }
+
+            .soonlogoBlack {
+                display: none;
+            }
+
+            .soonlogoWhi {
+                display: block !important;
+            }
+
+            #topBack > .trans,
+            #topBack > .menuTopTrans {
+                position: absolute;
+                right: 30px !important;
+                width: 70px;
+                height: 26px;
+                top: 50%;
+                margin-top: -13px;
+            }
+
+            #topBack > .trans > span {
+                height: 26px !important;
+                width: 70px !important;
+                border-radius: 100px !important;
+                margin-top: -17px;
+                position: absolute;
+                top: 50%;
+                line-height: 26px;
+                font-size: 20px !important;
+                border: 4px solid;
+
+            }
+
+            #topBack > .topBtn {
+                display: block;
+                width: 50px;
+                height: 20px;
+                margin-top: -10px;
+                position: absolute;
+                left: 30px;
+            }
+
+            #topBack > .topBtn > div {
+                background-color: #fff;
+                height: 3px;
+            }
+
+            #topBack > .topBtn > .br1a {
+                transition: all 0.2s ease-in-out;
+                transform: rotate(-45deg);
+                top: 8px;
+                width: 32px;
+                left: 4px;
+
+            }
+
+            #topBack > .topBtn > .br2a {
+                width: 0px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            #topBack > .topBtn > .br3a {
+                transition: all 0.2s ease-in-out;
+                transform: rotate(45deg);
+                top: 8px;
+                width: 32px;
+                left: 4px;
+            }
+
+            .menuTab2 {
+                display: block !important;
+            }
+
+            .menuTab {
+                display: none !important;
+            }
+
+
+            .leftBtn {
+                display: none;
+            }
+
+            .rightBtn {
+                display: none;
+            }
+
+            .dot {
+                width: 150px;
+                height: 10px;
+                position: absolute;
+                top: 500px;
+                left: 50%;
+                margin-left: -75px;
+                z-index: 60;
+                transition: all 1s ease-in-out !important;
+            }
+
+            .dot > div {
+                float: left;
+                margin-right: 10px;
+                margin-left: 10px;
+                width: 20px;
+                height: 20px;
+                border-radius: 100px;
+                transition: all 1s ease-in-out !important;
+                background-color: rgba(0, 0, 0, 0.3)
+            }
+
+            .dot > .zdot {
+                width: 50px;
+                pointer-events: none !important;
+            }
+
+            .bannerWrap > a {
+                width: 184px;
+                color: #fff;
+            }
+
+            #playStop {
+                display: block !important;
+            }
+
+            #back {
+                display: none;
+            }
+
+            .topEng {
+                background-color: #5C7CFA !important;
+            }
+
+            #topBack {
+                background-color: #FF6B6B;
+            }
+
+            #WhatCon {
+                width: 792px !important;
+                position: relative;
+                margin: auto;
+                height: 1028px;
+            }
+
+            #WhatCon > .wwrap {
+                background-color: #fff;
+                height: 640px;
+                transition: 1s ease-in-out;
+            }
+
+            #WhatCon > .dev {
+                position: absolute;
+                left: 0px;
+            }
+
+            #WhatCon > .des {
+                position: absolute;
+                right: 0px;
+                margin-right: 0px;
+            }
+
+            #WhatCon > .other {
+                position: absolute;
+                width: 792px;
+                bottom: 0px;
+                height: 364px;
+                margin-right: 0px;
+
+            }
+
+
+            .other > .whatTitle > i {
+                position: absolute;
+                left: 192px
+            }
+
+            .other > .whatTitle > .titleBar {
+                position: absolute;
+                left: 192px;
+            }
+
+            .other > .whatTitle > .whatTitleTxt {
+                position: absolute;
+                left: 192px;
+            }
+
+
+            .other > .WhatTxt {
+                margin-left: 42px;
+
+            }
+
+            .other > .WhatBar {
+                position: absolute;
+                left: 600px;
+                top: 130px;
+            }
+
+
+            #whatido {
+                height: 1300px !important;
+            }
+
+            .portWrap {
+                max-width: 918px;
+                height: 1140px;
+            }
+
+            .portBox {
+                max-width: 918px;
+                margin: auto;
+                transition: 1s ease-in-out;
+            }
+
+
+
+
+
+        }
+
+        @media screen and (max-width: 1035px) {
+            #bodyBack {
+                height: 4800px;
+            }
+
+            .Wrap {
+                max-width: 792px;
+            }
+
+
+
+            .bannerWrap > .logo {
+                position: absolute;
+                top: 170px;
+                width: 320px;
+                left: 50%;
+                margin-left: -160px;
+                z-index: 10;
+                transform: scale(1.0)
+            }
+
+            .bannerWrap > a {
+                position: absolute;
+                top: 300px;
+                left: 50%;
+                margin-left: -90px;
+                z-index: 10;
+            }
+
+
+            .bannerWrap > .hanBack {
+                position: absolute;
+                top: 180px;
+                right: 50%;
+                margin-right: -250px;
+                opacity: 0.2;
+            }
+
+            .bannerWrap > .coffeeBack {
+                position: absolute;
+                top: 180px;
+                right: 50%;
+                margin-right: -250px;
+                opacity: 0.2;
+            }
+
+
+            .bannerWrap > .illIll {
+                opacity: 0;
+                filter: blur(2px);
+                -webkit-filter: blur(2px);
+                right: 50%;
+            }
+
+            #playStop {
+                position: absolute;
+                bottom: -40px !important;
+                right: -40px !important;
+                margin-bottom: 0px !important;
+                margin-right: 0px !important;
+                transform: scale(0.2);
+                opacity: 0.6 !important;
+
+            }
+
+            .playStop2 {
+                transform: scale(0.2) !important;
+                transition: 0.5s ease-in-out;
+                opacity: 0.6 !important;
+            }
+
+            #aboutCon {
+                width: 792px;
+                height: 486px;
+                position: relative;
+                left: 50%;
+                margin-left: -396px;
+            }
+
+            .aboutImg {
+                width: 486px;
+                height: 486px;
+                transition: 1s ease-in-out;
+                position: absolute;
+                left: 50%;
+                margin-left: -243px;
+            }
+
+            #aboutCon > p {
+                width: 476px;
+                position: absolute;
+                right: 120px;
+                margin-top: 470px;
+            }
+
+
+            #aboutCon > span {
+                right: 230px;
+            }
+
+            .con1 {
+                position: absolute;
+                bottom: -280px;
+            }
+
+            .con2 {
+                position: absolute;
+                bottom: -400px;
+            }
+
+            #aboutCon > .titleBack1 {
+                width: 398px;
+                height: 350px;
+                position: absolute;
+                right: 183px;
+                bottom: -420px;
+            }
+
+            #aboutCon > .titleBack2 {
+                opacity: 0.1;
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                right: 260px;
+                top: 510px;
+                z-index: 90;
+            }
+
+            #aboutCon > .titleBack3 {
+                opacity: 0.1;
+                width: 140px;
+                height: 140px;
+                background-color: #5C7CFA;
+                position: absolute;
+                right: 152px;
+                bottom: -250px;
+            }
+
+            #aboutCon > .titleBar2 {
+                position: absolute;
+                left: 160px;
+                top: 522px;
+            }
+
+            #about {
+                height: 1200px;
+            }
+
+            .portWrap {
+                height: 1240px;
+            }
+
+            .portBox {
+                max-width: 612px;
+                margin: auto;
+                transition: 1s ease-in-out;
+            }
+
+
+
+
+        }
+
+        @media screen and (max-width: 792px) {
+            #bodyBack {
+                height: 6600px;
+
+            }
+
+            #about {
+                height: 1080px;
+            }
+
+            #aboutCon {
+                transform: scale(0.7);
+            }
+
+            #aboutCon > .titleBack1 {
+                width: 440px;
+                height: 360px;
+                position: absolute;
+                right: 163px;
+                bottom: -440px;
+            }
+
+            #aboutCon > span {
+                right: 230px;
+                transform: scale(1.3)
+            }
+
+            .con1 {
+                position: absolute;
+                bottom: -280px;
+            }
+
+            .con2 {
+                position: absolute;
+                bottom: -400px;
+            }
+
+            .Wrap {
+                width: 360px;
+            }
+
+            #whatido {
+                height: 2250px !important;
+            }
+
+            #WhatCon {
+                width: 360px;
+                position: relative;
+                left: 50%;
+                margin-left: -180px;
+                top: 250px;
+                height: 640px;
+            }
+
+
+            #WhatCon > .wwrap {
+                clear: both;
+                width: 360px;
+                height: 640px;
+                box-sizing: border-box;
+                border: solid #f2f2f2;
+                border-width: 0px 14px 0px 14px;
+
+            }
+
+            #WhatCon > .dev {
+                position: absolute;
+            }
+
+            #WhatCon > .des {
+                position: absolute;
+                left: 0px;
+                top: 670px;
+            }
+
+            #WhatCon > .other {
+                position: absolute;
+                left: 0px;
+                top: 1340px;
+                margin-right: 0px;
+            }
+
+            .other > .WhatTxt {
+                margin-left: 16px;
+
+            }
+
+            .other > .whatTitle > i {
+                left: 50%;
+                margin-left: -25px;
+            }
+
+            .other > .whatTitle > .titleBar {
+                position: absolute;
+                left: 166px;
+            }
+
+            .other > .whatTitle > .whatTitleTxt {
+                margin-left: -126px;
+            }
+
+            .other > .WhatBar {
+                width: 300px;
+                position: absolute;
+                top: 430px;
+                left: 50%;
+                margin-left: -150px;
+
+            }
+
+            .mleft100 {
+                position: absolute;
+                left: -100px !important;
+                opacity: 0 !important;
+                transition: all 1s ease-in-out;
+            }
+
+            .WhatBar > .barCon > span {
+                width: 200px !important;
+            }
+
+
+
+
+            .portWrap {
+                height: 2240px;
+            }
+
+            .portBox {
+                max-width: 306px;
+                margin: auto;
+                transition: 1s ease-in-out;
+            }
+
+            .select {
+                width: 306px;
+                position: absolute;
+                left: 50%;
+                top: 190px;
+                margin-left: -160px;
+            }
+
+            .select > div {
+                width: 80px;
+                height: 20px;
+                margin-top: 10px;
+                margin-left: 20px;
+                transition: 0.5s ease-in-out;
+            }
+
+            .contacCon > article {
+                border: 0px solid #fff;
+            }
+
+            .menuTab2 > ul > li > p {
+                width: 80px;
+                font-size: 12px;
+                letter-spacing: 0px;
+                border: 2px solid #fff;
+                line-height: 22px;
+                height: 26px;
+            }
+
+            .menuTab2 > ul {
+                position: relative;
+                width: 315px;
+            }
+
+            .menuTab2 > ul > li {
+                margin-top: 4px;
+            }
+
+            .menuTab2 > ul > li:nth-child(1) {
+                position: absolute;
+                left: 60px;
+            }
+
+            .menuTab2 > ul > li:nth-child(2) {
+                position: absolute;
+                left: 145px;
+            }
+
+            .menuTab2 > ul > li:nth-child(3) {
+                position: absolute;
+                right: 85px;
+            }
+
+            .menuTab2 > ul > li:nth-child(4) {
+                position: absolute;
+                right: 0px;
+            }
+
+            .contacCon > span {
+                position: absolute;
+                left: 100px;
+            }
+
+            .contacCon > .clipNone1 {
+                position: absolute;
+                left: 55px;
+            }
+
+            .contacCon > p {
+                position: absolute;
+                left: 90px;
+                width: 206px;
+            }
+
+            .contacCon > .clipNone2 {
+                position: absolute;
+                left: 45px;
+            }
+
+            .contacCon > article {
+                width: 360px;
+            }
+
+            .contacCon > article > img {
+                width: 340px;
+            }
+        }

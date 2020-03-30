@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>레터오더</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR:100,300,400,500,700,900|Noto+Serif+KR:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--
+    'Noto Sans KR', sans-serif; / 1,3,4,5,7,9
+    'Noto Serif KR', serif; / 2,3,4,5,6,7,9
+    'Nanum Pen Script', cursive; / 6
+-->
+    <style>
+        a:link {
+            color: #495057;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #495057;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #495057;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1;
+            font-family: 'Noto Sans KR', sans-serif;
+            list-style-type: none;
+        }
+
+        #wrap {
+            width: 360px;
+            border: 0px solid red;
+            margin: auto;
+            position: relative;
+        }
+
+        #toolbar {
+            width: 360px;
+            height: 68px;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            position: fixed;
+            z-index: 200;
+        }
+
+        #toolbar .toolbarline {
+            width: 360px;
+            height: 2px;
+            opacity: 0.2;
+            background-color: #000000;
+            position: absolute;
+            top: 68px;
+        }
+
+        #toolbar .quickmenu {
+            width: 24px;
+            height: 20px;
+            object-fit: contain;
+            position: absolute;
+            top: 24px;
+            left: 316px;
+        }
+
+        #toolbar .logo {
+            width: 108px;
+            height: 35px;
+            object-fit: contain;
+            position: absolute;
+            top: 17px;
+            left: 126px;
+        }
+
+        #head .back {
+            width: 360px;
+            object-fit: contain;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            z-index: -100;
+        }
+
+        #head p {
+            width: 300px;
+            height: 30px;
+            font-family: NotoSansKR;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: #ffffff;
+            position: absolute;
+            top: 90px;
+            left: 20px;
+        }
+
+        #head>.orderq {
+            width: 12px;
+            position: absolute;
+            top: 100px;
+            left: 102px;
+            cursor: pointer;
+        }
+
+        #head .headline {
+            width: 360px;
+            height: 2px;
+            opacity: 0.2;
+            border-radius: 10px;
+            background-color: #000000;
+            position: absolute;
+            top: 140px;
+        }
+
+        #head>.orderBox {
+            border: 1px solid #fff;
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: 78px;
+            left: 120px;
+            padding: 4px;
+            padding-top: 1px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+        }
+
+        #head>.orderBox>span {
+            font-size: 10px;
+            color: #fff;
+            font-weight: 100;
+        }
+
+        #head>.orderBox>span:first-child {
+            font-weight: 400;
+        }
+
+        #body {
+            width: 360px;
+            height: 1100px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 140px;
+        }
+
+        .cateBack {
+            margin: auto;
+            width: 320px;
+            height: 108px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .cateBack>h1 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 12px;
+            padding-top: 15px;
+        }
+
+        .cateBack>.menuCate {
+            position: absolute;
+            top: 44px;
+        }
+
+        .cateBack>.menuCate>li {
+            float: left;
+            width: 71px;
+            height: 18px;
+            margin-right: 4px;
+            border-radius: 6px;
+            background-color: #d8d8d8;
+        }
+
+        .cateBack>.menuCate>li>a>p {
+            color: #000;
+            font-size: 10px;
+            text-align: center;
+            margin-top: 3.5px;
+        }
+
+
+        .cateBack>.menuCate>li:first-child {
+            margin-left: 12px;
+        }
+
+        .cateBack>.menuCate>.menuFoc{
+            background-color: #4c130a;
+
+        }
+        .cateBack>.menuCate>.menuFoc>a>p {
+            color:#fff;
+        }
+
+        .cateBack>h2 {
+            font-size: 14px;
+            color: #000;
+            font-weight: 300;
+            position: absolute;
+            top: 76px;
+            left: 12px;
+            z-index: 100;
+        }
+
+        .cateBack>.openNclose {}
+
+        .cateBack>.openNclose>li {
+            position: absolute;
+            right: 12px;
+            top: 71px;
+            cursor: pointer;
+            z-index: 50;
+            width: 25px;
+            height: 25px;
+        }
+
+        .cateBack>.openNclose>li:first-child {
+            background-image: url(images/cate_open.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+        }
+
+        .cateBack>.openNclose>li:nth-child(2) {
+            background-image: url(images/cate_close.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: none;
+        }
+
+        #body>.proCate {
+            width: 320px;
+            height: 86px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            margin: auto;
+            position: relative;
+            top: -20px;
+            display: none;
+        }
+
+        #body>.proCate>div {
+            width: 296px;
+            height: 1px;
+            background-color: #ced4da;
+            position: absolute;
+            left: 12px;
+            bottom: 66px;
+
+        }
+
+        #body>.proCate>ul>li {
+            width: 34px;
+            height: 34px;
+            cursor: pointer;
+            float: left;
+            margin-right: 32px;
+            margin-top: 36px;
+            border-radius: 100px;
+
+        }
+        #body>.proCate>ul>li>img {
+            width: 34px;
+            height: 34px;
+        }
+
+        #body>.proCate>ul>li:nth-child(1) {
+            margin-left: 77px;
+            background-image: url(images/mark_new.png);
+            background-size: contain
+        }
+        #body>.proCate>ul>li:nth-child(2) {
+            background-image: url(images/mark_event.png);
+            background-size: contain
+        }
+        #body>.proCate>ul>li:nth-child(3) {
+            background-image: url(images/mark_sale.png);
+            background-size: contain
+        }
+
+        #body>.proCate>ul>.new {
+            background-image: url(images/mark_new_s.png)!important;
+        }
+
+        #body>.proCate>ul>.event {
+            background-image: url(images/mark_event_s.png)!important;
+        }
+
+        #body>.proCate>ul>.sale {
+            background-image: url(images/mark_sale_s.png)!important;
+        }
+
+        .proHead {
+            width: 320px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            margin: auto;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .proHead>p:first-child {
+            font-size: 14px;
+            color: #000;
+            font-weight: 300;
+            position: absolute;
+            top: 14px;
+            left: 12px;
+        }
+
+        .proHead>p {
+            font-size: 12px;
+            font-weight: 300;
+            position: absolute;
+            top: 14px;
+            right: 12px;
+        }
+
+        .proList {
+            margin: auto;
+            width: 320px;
+            margin-top: 14px;
+            position: relative;
+
+        }
+
+        .proList>ul:nth-child(2) {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .proList>ul>li {
+            cursor: pointer;
+        }
+
+        .proName {
+            width: 152px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+            padding-top: 6px;
+            margin-bottom: 14px;
+        }
+
+        .proLi {
+            width: 152px;
+            height: 152px;
+            border-radius: 12px;
+            background-color: black;
+        }
+        
+        .proLi>img {
+            width: 152px;
+            height: 152px;
+            border-radius: 12px;
+        }
+        
+
+        .opa7 {
+            opacity: 0.7;
+        }
+        
+
+        #body .footerback {
+            width: 360px;
+            position: absolute;
+            top: 840px;
+        }
+    </style>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="toolbar">
+            <a href="quick.html"><img src="images/toolbar/quickmenu.svg" alt="퀵메뉴" class="quickmenu"></a>
+            <a href="index.html"><img src="images/toolbar/logo.png" alt="로고" class="logo"></a>
+            <div class="toolbarline"></div>
+        </div>
+        <div id="head">
+            <div class='orderBox'><span>레터오더란?</span><br>
+                <span>원하는 시간, 장소에서 제품을 받아볼 수 있는 정기배달 서비스입니다.</span></div>
+            <img src="images/head/letterorderback.png" alt="배경" class="back">
+            <p>레터오더</p><img src="images/head/orderqus.png" alt="도움말" class="orderq">
+            <div class="headline"></div>
+        </div>
+        <div id="body">
+            <div class='cateBack'>
+                <h1>분류</h1>
+                <ul class="menuCate">
+                    <li class='menuFoc'><a href="letterorder.html">
+                            <p>All</p>
+                        </a></li>
+                    <li><a href="letterorder_coffee.html">
+                            <p>Coffee</p>
+                        </a></li>
+                    <li><a href="letterorder_noncoffee.html">
+                            <p>Non-Coffee</p>
+                        </a></li>
+                    <li><a href="letterorder_bakery.html">
+                            <p>Bakery</p>
+                        </a></li>
+                </ul>
+                <h2>정렬보기</h2>
+                <ul class='openNclose'>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+
+            <div class="proCate">
+                <div></div>
+                <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+            </div>
+            <div class='proHead'>
+                <p>All</p>
+                <p>커피레터의 모든 상품입니다.</p>
+            </div>
+            <div class='proList'>
+                <ul>
+                    <li class='proLi'><img src="images/pro1.png" alt="아메리카노"></li>
+                    <li class='proName'>카페 아메리카노</li>
+                    <li class='proLi'><img src="images/nonpro1.png" alt="제주 유기 녹차"></li>
+                    <li class='proName'>제주 유기 녹차</li>
+                    <li class='proLi'><img src="images/bakerypro1.png" alt="클래식스콘"></li>
+                    <li class='proName'>클래식 스콘</li>
+                    
+                </ul>
+                <ul>
+                    <li class='proLi'><img src="images/pro2.png" alt="에스프레소 마키야또"></li>
+                    <li class='proName'>에스프레소 마키야또</li>
+                    <li class='proLi'><img src="images/nonpro2.png" alt="잉글리쉬 브렉퍼스트 티"></li>
+                    <li class='proName'>잉글리쉬 브렉퍼스트 티</li>
+                    <li class='proLi'><img src="images/bakerypro2.png" alt="치즈 케이크"></li>
+                    <li class='proName'>치즈 케이크</li>
+                    
+                </ul>
+            </div>
+            <div class="footer">
+                <img src="images/footer.png" alt="푸터" class="footerback">
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.openNclose>li:eq(0)').click(function() {
+            $('.proCate').slideToggle();
+            $(this).css('display', 'none');
+            $('.openNclose>li:eq(1)').css('display', 'block')
+        });
+
+        $('.openNclose>li:eq(1)').click(function() {
+            $('.proCate').slideToggle();
+            $(this).css('display', 'none');
+            $('.openNclose>li:eq(0)').css('display', 'block')
+        });
+
+        $('.proLi>img').click(function() {
+            $(this).toggleClass('opa7');
+        });
+        $('.orderq').click(function() {
+            $('.orderBox').toggle();
+        });
+        
+        $('.proCate>ul>li:eq(0)').click(function(){
+            $(this).toggleClass('new')
+        });
+        
+        $('.proCate>ul>li:eq(1)').click(function(){
+            $(this).toggleClass('event')
+        });
+        
+        $('.proCate>ul>li:eq(2)').click(function(){
+            $(this).toggleClass('sale')
+        });
+    </script>
+</body></html>

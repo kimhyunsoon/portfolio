@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+    <meta charset=utf-8>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <style>
+         *{
+             list-style: none;
+             margin: 0;
+             padding: 0;
+         }
+         #wrap{
+             width: 900px;
+             margin: auto;
+             position: relative;
+         }
+         .ulWrap {
+             width: 510px;
+             height: 150px;
+             margin: auto;
+             overflow: hidden;
+             margin-top: 50px;
+             position: relative;
+/*             border: 10px solid #ff1;*/
+         }
+         button {
+             width: 50px;
+             height: 50px;
+         }
+         .ulWrap>.imgUl{
+             width: 900px;
+             height: 150px;
+             position: relative;
+             left: -170px;
+         }
+         
+         .ulWrap>.imgUl>li{
+             float: left;
+             width: 150px;
+             height: 150px;
+             margin-right: 10px;
+             margin-left: 10px;
+             border: 1px solid #f00;
+             box-sizing: border-box;
+             text-align: center;
+             line-height: 4.5;
+             font-weight: bold;
+             font-size: 2em;
+             color: aqua
+         }
+         .ulWrap>.imgUl>.red{
+             background-color: red;
+         }
+         .ulWrap>.imgUl>.orange{
+             background-color: orange;
+         }
+         .ulWrap>.imgUl>.yellow{
+             background-color: yellow;
+         }
+         .ulWrap>.imgUl>.green{
+             background-color: green;
+         }
+         .ulWrap>.imgUl>.blue{
+             background-color: blue;
+         }
+         
+         .btn {
+             width: 500px;
+             margin: auto;
+             margin-top: 10px;
+             margin-left: 288px;
+         }
+         .btn>button {
+             width: 100px;
+             height: 20px;
+             margin-right: 120px;
+         }
+       </style>
+    </head>
+    <body>
+    <div id="wrap">
+    <div class="ulWrap">
+    <ul class='imgUl'>
+        <li class="red">0</li>
+        <li class="orange">1</li>
+        <li class="yellow">2</li>
+        <li class="green">3</li>
+        <li class="blue">4</li>
+    </ul>
+    </div>
+    <div class=btn>
+    <button class='btn1'>&#60;</button>
+    <button class='btn2'>&#62;</button>
+    </div>
+    </div>
+    <script>
+          $(function(){
+              $('.btn2').click(function(){
+                  $('.imgUl').animate({left:'-=170px'},500,function(){
+                      $('.imgUl').css({left:'+=170px'});
+                      $('.imgUl').append($('.imgUl>li:first').clone());
+                      $('.imgUl>li:first').remove();
+                  });
+              });
+              $('.btn1').click(function(){
+                  $('.imgUl').animate({left:'+=170px'},500,function(){
+                      $('.imgUl').css({left:'-=170px'});
+                      $('.imgUl').prepend($('.imgUl>li:last').clone());
+                      $('.imgUl>li:last').remove();
+                  });
+              });
+          });
+       </script>
+    </body>
+</html>

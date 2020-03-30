@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap');
+
+/*공통적인 부분 또는 초기화할 스타일*/
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.wrap {
+    width: 940px;
+    margin: auto;
+    
+}
+
+.hidd {
+    display: none;
+}
+
+a {
+    color: #44555d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*헤더(상단 부분) 스타일*/
+#hd {}
+
+.hd1 {
+    margin-top: 30px;
+    overflow: auto;
+}
+
+.hd1 h1 {
+    float: left;
+    width: 200px;
+    padding-top: 12px;
+}
+
+.hd1 .nav {
+    float: left;
+    width: 550px;
+}
+
+.hd1 .nav .gnb {}
+
+.hd1 .nav .gnb > li {
+    float: left;
+}
+
+.hd1 .nav .gnb > li > a {
+    display: block;
+    padding: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333333;
+}
+
+.hd1 .nav .gnb > li:last-child > a {
+    color: #999;
+}
+
+.hd1 .nav .gnb > li:hover .sub {
+/*    display: block;*/
+}
+
+.hd1 .nav .gnb .sub {
+    position: absolute; z-index: 10;
+    left: 0;
+    top: 93px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+    padding-bottom: 90px;
+    display: none;
+}
+
+.hd1 .nav .gnb ul {
+    width: 640px;
+    margin: auto;
+}
+
+.hd1 .nav .gnb ul li {
+    float: left;
+    width: 160px;
+    border-right: 1px solid #eaeaea;
+    padding-left: 16px;
+}
+
+.hd1 .nav .gnb ul li:last-child {
+    border: 0;
+}
+
+.hd1 .nav .gnb ul li a {
+    display: block;
+    padding: 5px 0;
+}
+
+.hd1 .nav .gnb ul li a:first-child {
+    padding-top: 15px;
+}
+
+.hd1 .search {
+    float: right;
+    width: 100px;
+    text-align: right;
+}
+
+.hd1 .search .btnS {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.hd1 .search .sPop {
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.hd1 .search .sPop .sPopSbox {
+    background: #fff;
+    width: 500px;
+    margin: auto;
+    margin-top: 200px;
+    height: 600px;
+    position: relative;
+}
+
+.sPopSbox h2 {
+    font-size: 1.1em;
+    padding: 16px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.sPopSbox .sLink {
+    border-bottom: 1px solid #a6a6a6;
+    height: 55px;
+    /*overflow: auto;*/
+}
+
+.sPopSbox .sLink a {
+    display: block;
+    width: 33.33333%;
+    padding: 18px 0;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sPopSbox .sLink a.act,
+.sPopSbox .sLink a:hover {
+    color: #ff6666;
+    border-bottom: 3px solid #ff6666;
+    font-weight: 500;
+    position: relative;
+    top: 1px;
+}
+
+.sPopSbox .sCon {
+    background-color: #f5f6f1;
+    padding: 12px;
+}
+
+.sPopSbox .sCon1 {
+    position: relative;
+}
+
+.sPopSbox .sCon1 input {
+    background-color: #8291a4;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    border: 0;
+}
+
+.sPopSbox .sCon1 label input::placeholder {
+    color: #fff;
+}
+
+.sPopSbox .sCon1 .btnS {
+    position: absolute;
+    top: -4px;
+    right: 12px;
+    background-color: transparent;
+    border: 0;
+}
+
+.sPopSbox .sCon1 .tip {
+    color: #999999;
+    font-size: 0.8em;
+    padding: 20px 0;
+}
+
+.sPopSbox .btnClose {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+.sPopSbox .sCon2,
+.sPopSbox .sCon3 {
+    display: none;
+}
+
+
+
+.hd2 {
+    clear: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding: 4px 0;
+    background-color: #f7f8f3;
+    border-bottom: 1px solid #eee;
+}
+
+.hd2 .btnLogin {
+    font-size: 0.85em;
+}
+
+.hd2 .btnLogin:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/*콘텐츠(본문 부분) 스타일*/
+#con {margin-bottom: 100px;}
+
+.sec1 {
+    position: relative;
+}
+
+.sec1 img {}
+
+.sec1 .gnb {
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.sec1 .gnb li {
+    width: 170px;
+    float: left;
+    margin-right: 6px;
+}
+
+.sec1 .gnb li:last-child {
+    margin: 0;
+}
+
+.sec1 .gnb li a {
+    background-color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sec1 .gnb li a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+.sec2 {
+    margin-top: 56px;
+}
+
+.sec2 article {
+    width: 310px;
+    height: 242px;
+    float: left;
+    border-right: 1px solid #eaeaea;
+    padding: 0 16px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.sec2 article h3 {
+    margin-bottom: 20px;
+}
+
+.sec2 article .Blist {
+    font-size: 13px;
+}
+
+.sec2 article .Blist li {}
+
+.sec2 article .Blist li .Bdate {
+    font-size: 11px;
+    color: #808d9e;
+    margin: 6px 0;
+}
+
+.sec2 article .Blist li .Btit {margin-bottom:13px;
+width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.sec2 article .Blist li:last-child {position: absolute; top: 0; right: 16px;}
+
+
+.sec2 article.gong {}
+
+.sec2 article.evt h3{color:#145ab2}
+
+.sec2 article.prod {
+    border: 0;
+}
+
+
+.sec3 {text-align: center;}
+.sec3 img{width: 49.5%;}
+
+
+/*풋터(하단 부분) 스타일*/
+#ft {background-color: #454d5a; color: #fff; padding: 20px 0;}
+
+.ft1 {}
+.ft1 .info{width: 800px; float: left;}
+.ft1 .in1{padding: 5px 0; }
+.ft1 .in1 span{padding: 0 15px;}
+.ft1 .in2{padding: 10px 0;}
+.ft1 .in2 a{color: #fff; font-size: 12px; display: inline-block; 
+padding-right: 10px; margin-right: 10px; border-right: 1px solid #ccc;}
+.ft1 .in3{color: #ccc; font-size: 11px;}
+
+.ft1 .sns{float: right;}
+.ft1 .sns a{padding: 0 5px;}
+
+.ft2 {clear: both; padding: 20px 0; font-size: 12px}
+.ft2 img{float: left; margin-right: 8px;}
+.ft2 p{margin-top: 8px;}
+
+
+
+
